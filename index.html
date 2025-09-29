@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SASUSER</title>
-  </head>
-  <body>
-    <p>text here</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta>
+    <title>SASHELP</title>
+    <style>
+        /* 页面整体背景色和字体设置 */
+        body {
+            background-color: rgb(34, 34, 34);
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* 高度填满整个屏幕 */
+            display: flex;
+        }
+
+        /* 左侧栏 */
+        .left {
+            flex: 1; /* 占一半宽度 */
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            font-size: 5rem;
+            height: 100vh;
+            color: #0070C0; /* SASHELP 蓝色 */
+        }
+
+        /* 右侧栏 */
+        .right {
+            flex: 1; /* 占一半宽度 */
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            font-size: 1.5rem;
+            height: 100vh;
+            color: white; /* SASHELP 蓝色 */
+        }
+
+        .right ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .right li {
+            margin-bottom: 20px; /* 列表项间距 */
+        }
+
+        /* 响应式：屏幕窄时改为上下布局 */
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+            }
+            .left, .right {
+                flex: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <p><span style="color: #0070C0;">SAS</span><span style="color: white;">HELP</span></p>
+    </div>
+    <div class="right">
+        <ul>
+            <li>学 SAS</li>
+            <li>宏程序库</li>
+            <li>图形库</li>
+            <li>文章</li>
+            <li>关于</li>
+            <li>反馈</li>
+        </ul>
+    </div>
+</body>
 </html>
